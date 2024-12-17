@@ -1,0 +1,54 @@
+:root{
+    --MainHeight: 2000;
+    --MainWidth: 2000;
+    --CellLength: 20; 
+    --CellRowCount:calc(var(--MainHeight) / var(--CellLength)); /*Sıra*/
+    --CellColumnCount:calc(var(--MainWidth) / var(--CellLength));    /*Kolon*/
+}
+
+#MainPanel{
+    display: grid;
+    height: calc(var(--MainHeight) * 1px) ;
+    width: calc(var(--MainWidth) * 1px) ;
+    grid-template-rows: repeat(var(--CellRowCount), calc(var(--CellLength) * 1px));
+    grid-template-columns: repeat(var(--CellColumnCount),calc(var(--CellLength) * 1px));
+    border: 2px solid black;
+    border-radius: 4px;
+}
+#ColorPicker{
+    display: grid;
+    height: 70px;
+    padding: 10px;
+    width: 500px;
+    grid-template-rows: 1;
+    grid-template-columns: repeat(7,70px);
+    gap: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    left: 35%;
+}
+#Timer{
+    height: 90px;
+    width: 120px;
+    position: fixed;
+    bottom: 20px;
+    left: 70%;
+    border: 1px solid black; 
+    border-radius: 5px;
+}
+.Cell{
+    background-color: white;
+}
+.Cell:hover{
+    border: 1px solid black;
+}
+.ColorCell{
+    border-radius: 4px;
+}
+.ColorCell:hover{
+    border: 1px solid black;
+    border-radius: 4px;
+
+}

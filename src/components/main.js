@@ -6,6 +6,7 @@ const CanvasColumnCount = window.getComputedStyle(MainCanvas).gridTemplateColumn
 
 const CellLength = 20;
 const ColorCellLength = 70;
+const TimerWidth = 70;
 
 const ColorList = ["Red","Black","Green","White","Blue","Yellow","Brown"]
 
@@ -35,6 +36,14 @@ for(let i = 0; i< ColorList.length; i++){
 
     ColorPicker.append(ColorCell);
 }
+
+const Timer = document.createElement("div");
+Timer.style.width = `${TimerWidth}px`
+Timer.style.height = `${ColorCellLength}px`
+Timer.classList.add("Timer");
+
+ColorPicker.append(Timer);
+
 
 const Colors = document.getElementsByClassName("ColorCell");
 

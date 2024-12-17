@@ -19,25 +19,17 @@
     display: grid;
     height: 70px;
     padding: 10px;
-    width: 500px;
-    grid-template-rows: 1;
-    grid-template-columns: repeat(7,70px);
+    grid-template-columns: repeat(8,70px);
     gap: 2px;
     border: 1px solid black;
     border-radius: 5px;
     position: fixed;
     bottom: 20px;
-    left: 35%;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
 }
-#Timer{
-    height: 90px;
-    width: 120px;
-    position: fixed;
-    bottom: 20px;
-    left: 70%;
-    border: 1px solid black; 
-    border-radius: 5px;
-}
+
 .Cell{
     background-color: white;
 }

@@ -49,7 +49,6 @@ export default function PixelGenerator(){
     return {DrawPixel, DrawColorPicker}
     })();
     const PickColor = (()=>{
-        const ColorPicker = document.getElementById("ColorPicker");
 
         const SelectColor = ()=>{
             const Colors = document.getElementsByClassName("ColorCell");

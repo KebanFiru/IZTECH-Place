@@ -1,3 +1,3 @@
-import Main  from "./main/pixel.js";
+import PixelGenerator  from "./main/pixel.js";
 
-Main()
+PixelGenerator()

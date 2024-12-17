@@ -1,25 +1,22 @@
-export default function Main(){
-    const MainCanvas = document.getElementById("MainPanel");
-    const ColorPicker = document.getElementById("ColorPicker");
-    
-    const CanvasRowCount = window.getComputedStyle(MainCanvas).gridTemplateRows.split(' ').length;
-    const CanvasColumnCount = window.getComputedStyle(MainCanvas).gridTemplateColumns.split(' ').length;
-    
+export default function PixelGenerator(){
     const CellLength = 20;
     const ColorCellLength = 70;
     const TimerWidth = 70;
     
-    const ColorList = ["Red","Black","Green","White","Blue","Yellow","Brown"]
-    
     let Color = "Black";
 
     const DrawOnScreen = (()=>{
+        const MainCanvas = document.getElementById("MainPanel");
+
+        const CanvasRowCount = window.getComputedStyle(MainCanvas).gridTemplateRows.split(' ').length;
+        const CanvasColumnCount = window.getComputedStyle(MainCanvas).gridTemplateColumns.split(' ').length;
+
         const DrawPixel = ()=>{
             for(let i=0; i<CanvasColumnCount*CanvasRowCount; i++){
                 const Cell = document.createElement('div');
             
                 Cell.style.width = `${CellLength}px`;
-                Cell.style.height = `${CellLength}p`;
+                Cell.style.height = `${CellLength}px`;
                 Cell.classList.add("Cell");
             
                 MainCanvas.appendChild(Cell);
@@ -30,6 +27,8 @@ export default function Main(){
             }
         }
         const DrawColorPicker = ()=>{
+            const ColorList = ["Red","Black","Green","White","Blue","Yellow","Brown"]
+
             for(let i = 0; i< ColorList.length; i++){
                 const ColorCell = document.createElement("div");
             
@@ -50,6 +49,8 @@ export default function Main(){
     return {DrawPixel, DrawColorPicker}
     })();
     const PickColor = (()=>{
+        const ColorPicker = document.getElementById("ColorPicker");
+
         const SelectColor = ()=>{
             const Colors = document.getElementsByClassName("ColorCell");
 

@@ -59,12 +59,8 @@ export default function PixelGenerator(){
                 })
             
             })
-        }
-        const TimeRemain = () =>{
-            console.log("Test");
-        }
-        
-        return {SelectColor, TimeRemain}
+        }   
+        return {SelectColor}
     })();
     DrawOnScreen.DrawPixel();
     DrawOnScreen.DrawColorPicker();

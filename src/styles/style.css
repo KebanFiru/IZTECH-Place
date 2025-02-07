@@ -1,7 +1,7 @@
 @import url('pixel.css');
 
 :root{
-    --MainHeight: 2000;
+    --MainHeight: 2200;
     --MainWidth: 2000;
     --CellLength: 20; 
     --CellRowCount:calc(var(--MainHeight) / var(--CellLength)); /*Sıra*/
